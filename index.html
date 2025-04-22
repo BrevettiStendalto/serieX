@@ -170,8 +170,37 @@
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Message" required></textarea>
             <div class="form-option">
-                <input type="checkbox" id="sps-appointment" name="sps-appointment">
-                <label for="sps-appointment">Schedule an appointment at SPS</label>
+                <input type="checkbox" id="parma-appointment" name="parma-appointment">
+                <label for="parma-appointment">Schedule an appointment in SPS Parma</label>
+            </div>
+            <div class="appointment-options" id="parma-options" style="display: none;">
+                <p class="appointment-header">Select date and time:</p>
+                <div class="appointment-grid">
+                    <div class="appointment-option">
+                        <input type="radio" id="am-1305" name="appointment-time" value="morning 13/05">
+                        <label for="am-1305">Morning 13/05</label>
+                    </div>
+                    <div class="appointment-option">
+                        <input type="radio" id="pm-1305" name="appointment-time" value="afternoon 13/05">
+                        <label for="pm-1305">Afternoon 13/05</label>
+                    </div>
+                    <div class="appointment-option">
+                        <input type="radio" id="am-1405" name="appointment-time" value="morning 14/05">
+                        <label for="am-1405">Morning 14/05</label>
+                    </div>
+                    <div class="appointment-option">
+                        <input type="radio" id="pm-1405" name="appointment-time" value="afternoon 14/05">
+                        <label for="pm-1405">Afternoon 14/05</label>
+                    </div>
+                    <div class="appointment-option">
+                        <input type="radio" id="am-1505" name="appointment-time" value="morning 15/05">
+                        <label for="am-1505">Morning 15/05</label>
+                    </div>
+                    <div class="appointment-option">
+                        <input type="radio" id="pm-1505" name="appointment-time" value="afternoon 15/05">
+                        <label for="pm-1505">Afternoon 15/05</label>
+                    </div>
+                </div>
             </div>
             <button type="submit" class="cta-button">Send Message</button>
         </form>

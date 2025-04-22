@@ -8,6 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize form submission handler
     initContactForm();
+    
+    // Function to handle the appointment checkbox
+    const parmaCheckbox = document.getElementById('parma-appointment');
+    const parmaOptions = document.getElementById('parma-options');
+    
+    if (parmaCheckbox && parmaOptions) {
+        parmaCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                parmaOptions.style.display = 'block';
+            } else {
+                parmaOptions.style.display = 'none';
+                // Deseleziona tutti i radio button quando si deseleziona il checkbox
+                const radioButtons = parmaOptions.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(radio => {
+                    radio.checked = false;
+                });
+            }
+        });
+    }
 });
 
 // Function to handle scroll animations

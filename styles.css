@@ -1005,4 +1005,61 @@ footer {
     .certification-image {
         order: -1;
     }
+}
+
+/* Appointment Options Styles */
+.appointment-options {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.appointment-header {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--primary-black);
+}
+
+.appointment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.appointment-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.appointment-option:hover {
+    background-color: var(--primary-yellow);
+    transform: translateY(-2px);
+}
+
+.appointment-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-black);
+}
+
+.appointment-option label {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
 } 
