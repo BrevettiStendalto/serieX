@@ -217,10 +217,6 @@ body.loaded {
     object-fit: contain;
 }
 
-.hero-product-image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
 
 @media (min-width: 1024px) {
     .hero-image {
@@ -730,7 +726,6 @@ body.loaded {
 .cta-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    font-weight: 700;
 }
 
 /* Contact Form */
