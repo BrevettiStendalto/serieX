@@ -168,6 +168,444 @@
         <form class="contact-form">
             <input type="text" placeholder="Name" required>
             <input type="email" placeholder="Email" required>
+            <div class="phone-input-container">
+                <div class="phone-prefix-selector">
+                    <div class="selected-prefix">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" class="prefix-flag">
+                        <span>+44</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="prefix-dropdown">
+                        <div class="prefix-search">
+                            <input type="text" placeholder="Search country...">
+                        </div>
+                        <div class="prefix-list">
+                            <div class="prefix-item" data-prefix="+44" data-country="GB">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="United Kingdom" class="prefix-flag">
+                                <span class="prefix-country">United Kingdom</span>
+                                <span class="prefix-code">+44</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+1" data-country="US">
+                                <img src="https://flagcdn.com/w20/us.png" alt="United States" class="prefix-flag">
+                                <span class="prefix-country">United States</span>
+                                <span class="prefix-code">+1</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+39" data-country="IT">
+                                <img src="https://flagcdn.com/w20/it.png" alt="Italy" class="prefix-flag">
+                                <span class="prefix-country">Italy</span>
+                                <span class="prefix-code">+39</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+33" data-country="FR">
+                                <img src="https://flagcdn.com/w20/fr.png" alt="France" class="prefix-flag">
+                                <span class="prefix-country">France</span>
+                                <span class="prefix-code">+33</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+49" data-country="DE">
+                                <img src="https://flagcdn.com/w20/de.png" alt="Germany" class="prefix-flag">
+                                <span class="prefix-country">Germany</span>
+                                <span class="prefix-code">+49</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+34" data-country="ES">
+                                <img src="https://flagcdn.com/w20/es.png" alt="Spain" class="prefix-flag">
+                                <span class="prefix-country">Spain</span>
+                                <span class="prefix-code">+34</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+41" data-country="CH">
+                                <img src="https://flagcdn.com/w20/ch.png" alt="Switzerland" class="prefix-flag">
+                                <span class="prefix-country">Switzerland</span>
+                                <span class="prefix-code">+41</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+7" data-country="RU">
+                                <img src="https://flagcdn.com/w20/ru.png" alt="Russia" class="prefix-flag">
+                                <span class="prefix-country">Russia</span>
+                                <span class="prefix-code">+7</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+86" data-country="CN">
+                                <img src="https://flagcdn.com/w20/cn.png" alt="China" class="prefix-flag">
+                                <span class="prefix-country">China</span>
+                                <span class="prefix-code">+86</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+81" data-country="JP">
+                                <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="prefix-flag">
+                                <span class="prefix-country">Japan</span>
+                                <span class="prefix-code">+81</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+91" data-country="IN">
+                                <img src="https://flagcdn.com/w20/in.png" alt="India" class="prefix-flag">
+                                <span class="prefix-country">India</span>
+                                <span class="prefix-code">+91</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+55" data-country="BR">
+                                <img src="https://flagcdn.com/w20/br.png" alt="Brazil" class="prefix-flag">
+                                <span class="prefix-country">Brazil</span>
+                                <span class="prefix-code">+55</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+52" data-country="MX">
+                                <img src="https://flagcdn.com/w20/mx.png" alt="Mexico" class="prefix-flag">
+                                <span class="prefix-country">Mexico</span>
+                                <span class="prefix-code">+52</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+82" data-country="KR">
+                                <img src="https://flagcdn.com/w20/kr.png" alt="South Korea" class="prefix-flag">
+                                <span class="prefix-country">South Korea</span>
+                                <span class="prefix-code">+82</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+61" data-country="AU">
+                                <img src="https://flagcdn.com/w20/au.png" alt="Australia" class="prefix-flag">
+                                <span class="prefix-country">Australia</span>
+                                <span class="prefix-code">+61</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+64" data-country="NZ">
+                                <img src="https://flagcdn.com/w20/nz.png" alt="New Zealand" class="prefix-flag">
+                                <span class="prefix-country">New Zealand</span>
+                                <span class="prefix-code">+64</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+27" data-country="ZA">
+                                <img src="https://flagcdn.com/w20/za.png" alt="South Africa" class="prefix-flag">
+                                <span class="prefix-country">South Africa</span>
+                                <span class="prefix-code">+27</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+20" data-country="EG">
+                                <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" class="prefix-flag">
+                                <span class="prefix-country">Egypt</span>
+                                <span class="prefix-code">+20</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+31" data-country="NL">
+                                <img src="https://flagcdn.com/w20/nl.png" alt="Netherlands" class="prefix-flag">
+                                <span class="prefix-country">Netherlands</span>
+                                <span class="prefix-code">+31</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+32" data-country="BE">
+                                <img src="https://flagcdn.com/w20/be.png" alt="Belgium" class="prefix-flag">
+                                <span class="prefix-country">Belgium</span>
+                                <span class="prefix-code">+32</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+351" data-country="PT">
+                                <img src="https://flagcdn.com/w20/pt.png" alt="Portugal" class="prefix-flag">
+                                <span class="prefix-country">Portugal</span>
+                                <span class="prefix-code">+351</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+30" data-country="GR">
+                                <img src="https://flagcdn.com/w20/gr.png" alt="Greece" class="prefix-flag">
+                                <span class="prefix-country">Greece</span>
+                                <span class="prefix-code">+30</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+46" data-country="SE">
+                                <img src="https://flagcdn.com/w20/se.png" alt="Sweden" class="prefix-flag">
+                                <span class="prefix-country">Sweden</span>
+                                <span class="prefix-code">+46</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+47" data-country="NO">
+                                <img src="https://flagcdn.com/w20/no.png" alt="Norway" class="prefix-flag">
+                                <span class="prefix-country">Norway</span>
+                                <span class="prefix-code">+47</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+45" data-country="DK">
+                                <img src="https://flagcdn.com/w20/dk.png" alt="Denmark" class="prefix-flag">
+                                <span class="prefix-country">Denmark</span>
+                                <span class="prefix-code">+45</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+358" data-country="FI">
+                                <img src="https://flagcdn.com/w20/fi.png" alt="Finland" class="prefix-flag">
+                                <span class="prefix-country">Finland</span>
+                                <span class="prefix-code">+358</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+48" data-country="PL">
+                                <img src="https://flagcdn.com/w20/pl.png" alt="Poland" class="prefix-flag">
+                                <span class="prefix-country">Poland</span>
+                                <span class="prefix-code">+48</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+43" data-country="AT">
+                                <img src="https://flagcdn.com/w20/at.png" alt="Austria" class="prefix-flag">
+                                <span class="prefix-country">Austria</span>
+                                <span class="prefix-code">+43</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+36" data-country="HU">
+                                <img src="https://flagcdn.com/w20/hu.png" alt="Hungary" class="prefix-flag">
+                                <span class="prefix-country">Hungary</span>
+                                <span class="prefix-code">+36</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+420" data-country="CZ">
+                                <img src="https://flagcdn.com/w20/cz.png" alt="Czech Republic" class="prefix-flag">
+                                <span class="prefix-country">Czech Republic</span>
+                                <span class="prefix-code">+420</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+90" data-country="TR">
+                                <img src="https://flagcdn.com/w20/tr.png" alt="Turkey" class="prefix-flag">
+                                <span class="prefix-country">Turkey</span>
+                                <span class="prefix-code">+90</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+971" data-country="AE">
+                                <img src="https://flagcdn.com/w20/ae.png" alt="United Arab Emirates" class="prefix-flag">
+                                <span class="prefix-country">United Arab Emirates</span>
+                                <span class="prefix-code">+971</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+966" data-country="SA">
+                                <img src="https://flagcdn.com/w20/sa.png" alt="Saudi Arabia" class="prefix-flag">
+                                <span class="prefix-country">Saudi Arabia</span>
+                                <span class="prefix-code">+966</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+65" data-country="SG">
+                                <img src="https://flagcdn.com/w20/sg.png" alt="Singapore" class="prefix-flag">
+                                <span class="prefix-country">Singapore</span>
+                                <span class="prefix-code">+65</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+60" data-country="MY">
+                                <img src="https://flagcdn.com/w20/my.png" alt="Malaysia" class="prefix-flag">
+                                <span class="prefix-country">Malaysia</span>
+                                <span class="prefix-code">+60</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+66" data-country="TH">
+                                <img src="https://flagcdn.com/w20/th.png" alt="Thailand" class="prefix-flag">
+                                <span class="prefix-country">Thailand</span>
+                                <span class="prefix-code">+66</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+92" data-country="PK">
+                                <img src="https://flagcdn.com/w20/pk.png" alt="Pakistan" class="prefix-flag">
+                                <span class="prefix-country">Pakistan</span>
+                                <span class="prefix-code">+92</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+54" data-country="AR">
+                                <img src="https://flagcdn.com/w20/ar.png" alt="Argentina" class="prefix-flag">
+                                <span class="prefix-country">Argentina</span>
+                                <span class="prefix-code">+54</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+56" data-country="CL">
+                                <img src="https://flagcdn.com/w20/cl.png" alt="Chile" class="prefix-flag">
+                                <span class="prefix-country">Chile</span>
+                                <span class="prefix-code">+56</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+57" data-country="CO">
+                                <img src="https://flagcdn.com/w20/co.png" alt="Colombia" class="prefix-flag">
+                                <span class="prefix-country">Colombia</span>
+                                <span class="prefix-code">+57</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+58" data-country="VE">
+                                <img src="https://flagcdn.com/w20/ve.png" alt="Venezuela" class="prefix-flag">
+                                <span class="prefix-country">Venezuela</span>
+                                <span class="prefix-code">+58</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+380" data-country="UA">
+                                <img src="https://flagcdn.com/w20/ua.png" alt="Ukraine" class="prefix-flag">
+                                <span class="prefix-country">Ukraine</span>
+                                <span class="prefix-code">+380</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+40" data-country="RO">
+                                <img src="https://flagcdn.com/w20/ro.png" alt="Romania" class="prefix-flag">
+                                <span class="prefix-country">Romania</span>
+                                <span class="prefix-code">+40</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+63" data-country="PH">
+                                <img src="https://flagcdn.com/w20/ph.png" alt="Philippines" class="prefix-flag">
+                                <span class="prefix-country">Philippines</span>
+                                <span class="prefix-code">+63</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+353" data-country="IE">
+                                <img src="https://flagcdn.com/w20/ie.png" alt="Ireland" class="prefix-flag">
+                                <span class="prefix-country">Ireland</span>
+                                <span class="prefix-code">+353</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+352" data-country="LU">
+                                <img src="https://flagcdn.com/w20/lu.png" alt="Luxembourg" class="prefix-flag">
+                                <span class="prefix-country">Luxembourg</span>
+                                <span class="prefix-code">+352</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+679" data-country="FJ">
+                                <img src="https://flagcdn.com/w20/fj.png" alt="Fiji" class="prefix-flag">
+                                <span class="prefix-country">Fiji</span>
+                                <span class="prefix-code">+679</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+675" data-country="PG">
+                                <img src="https://flagcdn.com/w20/pg.png" alt="Papua New Guinea" class="prefix-flag">
+                                <span class="prefix-country">Papua New Guinea</span>
+                                <span class="prefix-code">+675</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+685" data-country="WS">
+                                <img src="https://flagcdn.com/w20/ws.png" alt="Samoa" class="prefix-flag">
+                                <span class="prefix-country">Samoa</span>
+                                <span class="prefix-code">+685</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+677" data-country="SB">
+                                <img src="https://flagcdn.com/w20/sb.png" alt="Solomon Islands" class="prefix-flag">
+                                <span class="prefix-country">Solomon Islands</span>
+                                <span class="prefix-code">+677</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+676" data-country="TO">
+                                <img src="https://flagcdn.com/w20/to.png" alt="Tonga" class="prefix-flag">
+                                <span class="prefix-country">Tonga</span>
+                                <span class="prefix-code">+676</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+678" data-country="VU">
+                                <img src="https://flagcdn.com/w20/vu.png" alt="Vanuatu" class="prefix-flag">
+                                <span class="prefix-country">Vanuatu</span>
+                                <span class="prefix-code">+678</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+686" data-country="KI">
+                                <img src="https://flagcdn.com/w20/ki.png" alt="Kiribati" class="prefix-flag">
+                                <span class="prefix-country">Kiribati</span>
+                                <span class="prefix-code">+686</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+692" data-country="MH">
+                                <img src="https://flagcdn.com/w20/mh.png" alt="Marshall Islands" class="prefix-flag">
+                                <span class="prefix-country">Marshall Islands</span>
+                                <span class="prefix-code">+692</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+691" data-country="FM">
+                                <img src="https://flagcdn.com/w20/fm.png" alt="Micronesia" class="prefix-flag">
+                                <span class="prefix-country">Micronesia</span>
+                                <span class="prefix-code">+691</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+674" data-country="NR">
+                                <img src="https://flagcdn.com/w20/nr.png" alt="Nauru" class="prefix-flag">
+                                <span class="prefix-country">Nauru</span>
+                                <span class="prefix-code">+674</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+680" data-country="PW">
+                                <img src="https://flagcdn.com/w20/pw.png" alt="Palau" class="prefix-flag">
+                                <span class="prefix-country">Palau</span>
+                                <span class="prefix-code">+680</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+688" data-country="TV">
+                                <img src="https://flagcdn.com/w20/tv.png" alt="Tuvalu" class="prefix-flag">
+                                <span class="prefix-country">Tuvalu</span>
+                                <span class="prefix-code">+688</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+682" data-country="CK">
+                                <img src="https://flagcdn.com/w20/ck.png" alt="Cook Islands" class="prefix-flag">
+                                <span class="prefix-country">Cook Islands</span>
+                                <span class="prefix-code">+682</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+689" data-country="PF">
+                                <img src="https://flagcdn.com/w20/pf.png" alt="French Polynesia" class="prefix-flag">
+                                <span class="prefix-country">French Polynesia</span>
+                                <span class="prefix-code">+689</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+1671" data-country="GU">
+                                <img src="https://flagcdn.com/w20/gu.png" alt="Guam" class="prefix-flag">
+                                <span class="prefix-country">Guam</span>
+                                <span class="prefix-code">+1671</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+687" data-country="NC">
+                                <img src="https://flagcdn.com/w20/nc.png" alt="New Caledonia" class="prefix-flag">
+                                <span class="prefix-country">New Caledonia</span>
+                                <span class="prefix-code">+687</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+84" data-country="VN">
+                                <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam" class="prefix-flag">
+                                <span class="prefix-country">Vietnam</span>
+                                <span class="prefix-code">+84</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+886" data-country="TW">
+                                <img src="https://flagcdn.com/w20/tw.png" alt="Taiwan" class="prefix-flag">
+                                <span class="prefix-country">Taiwan</span>
+                                <span class="prefix-code">+886</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+1" data-country="CA">
+                                <img src="https://flagcdn.com/w20/ca.png" alt="Canada" class="prefix-flag">
+                                <span class="prefix-country">Canada</span>
+                                <span class="prefix-code">+1</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+213" data-country="DZ">
+                                <img src="https://flagcdn.com/w20/dz.png" alt="Algeria" class="prefix-flag">
+                                <span class="prefix-country">Algeria</span>
+                                <span class="prefix-code">+213</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+973" data-country="BH">
+                                <img src="https://flagcdn.com/w20/bh.png" alt="Bahrain" class="prefix-flag">
+                                <span class="prefix-country">Bahrain</span>
+                                <span class="prefix-code">+973</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+269" data-country="KM">
+                                <img src="https://flagcdn.com/w20/km.png" alt="Comoros" class="prefix-flag">
+                                <span class="prefix-country">Comoros</span>
+                                <span class="prefix-code">+269</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+253" data-country="DJ">
+                                <img src="https://flagcdn.com/w20/dj.png" alt="Djibouti" class="prefix-flag">
+                                <span class="prefix-country">Djibouti</span>
+                                <span class="prefix-code">+253</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+964" data-country="IQ">
+                                <img src="https://flagcdn.com/w20/iq.png" alt="Iraq" class="prefix-flag">
+                                <span class="prefix-country">Iraq</span>
+                                <span class="prefix-code">+964</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+962" data-country="JO">
+                                <img src="https://flagcdn.com/w20/jo.png" alt="Jordan" class="prefix-flag">
+                                <span class="prefix-country">Jordan</span>
+                                <span class="prefix-code">+962</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+965" data-country="KW">
+                                <img src="https://flagcdn.com/w20/kw.png" alt="Kuwait" class="prefix-flag">
+                                <span class="prefix-country">Kuwait</span>
+                                <span class="prefix-code">+965</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+961" data-country="LB">
+                                <img src="https://flagcdn.com/w20/lb.png" alt="Lebanon" class="prefix-flag">
+                                <span class="prefix-country">Lebanon</span>
+                                <span class="prefix-code">+961</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+218" data-country="LY">
+                                <img src="https://flagcdn.com/w20/ly.png" alt="Libya" class="prefix-flag">
+                                <span class="prefix-country">Libya</span>
+                                <span class="prefix-code">+218</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+222" data-country="MR">
+                                <img src="https://flagcdn.com/w20/mr.png" alt="Mauritania" class="prefix-flag">
+                                <span class="prefix-country">Mauritania</span>
+                                <span class="prefix-code">+222</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+212" data-country="MA">
+                                <img src="https://flagcdn.com/w20/ma.png" alt="Morocco" class="prefix-flag">
+                                <span class="prefix-country">Morocco</span>
+                                <span class="prefix-code">+212</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+968" data-country="OM">
+                                <img src="https://flagcdn.com/w20/om.png" alt="Oman" class="prefix-flag">
+                                <span class="prefix-country">Oman</span>
+                                <span class="prefix-code">+968</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+970" data-country="PS">
+                                <img src="https://flagcdn.com/w20/ps.png" alt="Palestine" class="prefix-flag">
+                                <span class="prefix-country">Palestine</span>
+                                <span class="prefix-code">+970</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+974" data-country="QA">
+                                <img src="https://flagcdn.com/w20/qa.png" alt="Qatar" class="prefix-flag">
+                                <span class="prefix-country">Qatar</span>
+                                <span class="prefix-code">+974</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+252" data-country="SO">
+                                <img src="https://flagcdn.com/w20/so.png" alt="Somalia" class="prefix-flag">
+                                <span class="prefix-country">Somalia</span>
+                                <span class="prefix-code">+252</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+249" data-country="SD">
+                                <img src="https://flagcdn.com/w20/sd.png" alt="Sudan" class="prefix-flag">
+                                <span class="prefix-country">Sudan</span>
+                                <span class="prefix-code">+249</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+963" data-country="SY">
+                                <img src="https://flagcdn.com/w20/sy.png" alt="Syria" class="prefix-flag">
+                                <span class="prefix-country">Syria</span>
+                                <span class="prefix-code">+963</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+216" data-country="TN">
+                                <img src="https://flagcdn.com/w20/tn.png" alt="Tunisia" class="prefix-flag">
+                                <span class="prefix-country">Tunisia</span>
+                                <span class="prefix-code">+216</span>
+                            </div>
+                            <div class="prefix-item" data-prefix="+967" data-country="YE">
+                                <img src="https://flagcdn.com/w20/ye.png" alt="Yemen" class="prefix-flag">
+                                <span class="prefix-country">Yemen</span>
+                                <span class="prefix-code">+967</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="tel" placeholder="Phone number" class="phone-input" name="phone" pattern="[0-9\s\-\+\(\)]*">
+                <input type="hidden" name="phone_prefix" value="+44">
+            </div>
             <textarea placeholder="Message" required></textarea>
             <div class="form-option">
                 <input type="checkbox" id="parma-appointment" name="parma-appointment">

@@ -1062,4 +1062,137 @@ footer {
     .appointment-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Phone Input Styles */
+.phone-input-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.phone-prefix-selector {
+    position: relative;
+    z-index: 10;
+}
+
+.selected-prefix {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    cursor: pointer;
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+.selected-prefix:hover {
+    background-color: var(--light-gray);
+}
+
+.prefix-flag {
+    width: 20px;
+    height: 15px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.selected-prefix span {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.prefix-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.phone-prefix-selector.active .prefix-dropdown {
+    max-height: 350px;
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prefix-search {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prefix-search input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.prefix-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.prefix-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.prefix-item:hover {
+    background-color: var(--light-gray);
+}
+
+.prefix-country {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.prefix-code {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.phone-input {
+    flex: 1;
+    height: 50px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+}
+
+.phone-input:focus, 
+.prefix-search input:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 2px rgba(255, 227, 91, 0.3);
+}
+
+@media (max-width: 480px) {
+    .prefix-dropdown {
+        width: 250px;
+    }
+    
+    .selected-prefix {
+        width: 80px;
+    }
 } 

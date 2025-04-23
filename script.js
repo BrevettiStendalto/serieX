@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+    // Inizializza il selettore di prefisso telefonico
+    initPhonePrefixSelector();
 });
 
 // Function to handle scroll animations
@@ -161,4 +164,67 @@ window.addEventListener('load', () => {
             loader.remove();
         }, 500);
     }, 1000);
-}); 
+});
+
+// Funzione per gestire il selettore di prefisso telefonico
+function initPhonePrefixSelector() {
+    const prefixSelectors = document.querySelectorAll('.phone-prefix-selector');
+    
+    prefixSelectors.forEach(selector => {
+        const selectedPrefix = selector.querySelector('.selected-prefix');
+        const dropdown = selector.querySelector('.prefix-dropdown');
+        const prefixItems = selector.querySelectorAll('.prefix-item');
+        const selectedImg = selectedPrefix.querySelector('img');
+        const selectedSpan = selectedPrefix.querySelector('span');
+        const hiddenInput = selector.parentElement.querySelector('input[name="phone_prefix"]');
+        const searchInput = selector.querySelector('.prefix-search input');
+        
+        // Toggle dropdown when clicking on the selected prefix
+        selectedPrefix.addEventListener('click', () => {
+            selector.classList.toggle('active');
+            if (selector.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!selector.contains(e.target)) {
+                selector.classList.remove('active');
+            }
+        });
+        
+        // Handle prefix selection
+        prefixItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const prefix = item.getAttribute('data-prefix');
+                const country = item.getAttribute('data-country');
+                const flagSrc = item.querySelector('img').src;
+                
+                selectedImg.src = flagSrc;
+                selectedSpan.textContent = prefix;
+                hiddenInput.value = prefix;
+                
+                selector.classList.remove('active');
+            });
+        });
+        
+        // Handle search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                const searchValue = searchInput.value.toLowerCase();
+                
+                prefixItems.forEach(item => {
+                    const countryName = item.querySelector('.prefix-country').textContent.toLowerCase();
+                    const prefixCode = item.querySelector('.prefix-code').textContent.toLowerCase();
+                    
+                    if (countryName.includes(searchValue) || prefixCode.includes(searchValue)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        }
+    });
+} 
