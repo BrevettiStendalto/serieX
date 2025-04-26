@@ -870,24 +870,48 @@ footer {
         flex-direction: column;
         text-align: center;
         padding-top: 5rem;
+        padding: 2rem;
+        min-height: auto;
     }
 
     .hero-content {
         padding-right: 0;
         margin-bottom: 2rem;
+        max-width: 100%;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .hero h2 {
         font-size: 1.5rem;
     }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .hero-product-image {
+        max-width: 85%;
+        margin: 0 auto;
+    }
 
     .product-showcase,
     .specifications {
         flex-direction: column;
+        padding: 3rem 2rem;
+    }
+    
+    .features,
+    .applications,
+    .clean-room-certification {
+        padding: 3rem 2rem;
     }
 
     .showcase-content,
@@ -898,10 +922,131 @@ footer {
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid,
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card,
+    .application-card {
+        padding: 1.5rem;
     }
 
     .carousel-slide img {
         height: 300px;
+    }
+    
+    .carousel-button {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .carousel-button.prev {
+        left: 10px;
+    }
+    
+    .carousel-button.next {
+        right: 10px;
+    }
+    
+    .slide-description {
+        padding: 1rem;
+    }
+    
+    .slide-description h3 {
+        font-size: 1rem;
+    }
+    
+    .slide-description p {
+        font-size: 0.8rem;
+    }
+    
+    .contact-form {
+        padding: 0 1rem;
+    }
+    
+    .cta-section {
+        padding: 3rem 2rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Regole per schermi molto piccoli */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-container {
+        max-width: 95%;
+    }
+    
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .language-switcher {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .language-button {
+        padding: 6px 10px;
+    }
+    
+    .header-logo {
+        max-width: 180px;
+    }
+    
+    .certification-details {
+        gap: 1.5rem;
+    }
+    
+    .certification-text li {
+        padding-left: 2rem;
+    }
+    
+    .certification-text li:before {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .form-option {
+        padding: 0.8rem;
+    }
+    
+    .form-option label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
     }
 }
 
