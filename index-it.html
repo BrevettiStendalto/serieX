@@ -171,10 +171,12 @@
 
     <section id="contact" class="cta-section">
         <h2 class="section-title">Contattaci</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <div class="phone-input-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <!-- chiave Alessandro Merlino -->
+            <input type="hidden" name="access_key" value="d2f5b9a8-acda-4c73-b0f4-24f30b2a0878">
+            <input type="hidden" name="subject" value="Richiesta informazioni 301F">
+            <input type="text" name="nome" placeholder="Nome e Cognome" required>
+            <input type="email" name="email" placeholder="Email" required>
                 <div class="phone-prefix-selector">
                     <div class="selected-prefix">
                         <img src="https://flagcdn.com/w20/it.png" alt="Bandiera italiana" class="prefix-flag">
