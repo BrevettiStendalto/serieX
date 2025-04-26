@@ -177,6 +177,7 @@
             <input type="hidden" name="subject" value="Richiesta informazioni 301F">
             <input type="text" name="nome" placeholder="Nome e Cognome" required>
             <input type="email" name="email" placeholder="Email" required>
+            <div class="phone-input-container">
                 <div class="phone-prefix-selector">
                     <div class="selected-prefix">
                         <img src="https://flagcdn.com/w20/it.png" alt="Bandiera italiana" class="prefix-flag">
@@ -899,41 +900,62 @@
                 <input type="tel" placeholder="Numero di telefono" class="phone-input" name="phone" pattern="[0-9\s\-\+\(\)]*">
                 <input type="hidden" name="phone_prefix" value="+39">
             </div>
-            <textarea placeholder="Messaggio" required></textarea>
+            <textarea name="messaggio" placeholder="Messaggio"></textarea>
             <div class="form-option">
-                <input type="checkbox" id="parma-appointment" name="parma-appointment">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="parma-appointment" name="parma-appointment">
+                    <span class="checkbox-custom"></span>
+                </div>
                 <label for="parma-appointment">Prenota un appuntamento alla fiera SPS di Parma</label>
             </div>
             <div class="appointment-options" id="parma-options" style="display: none;">
                 <p class="appointment-header">Seleziona data e orario:</p>
                 <div class="appointment-grid">
                     <div class="appointment-option">
-                        <input type="radio" id="am-1305" name="appointment-time" value="mattina 13/05">
+                        <div class="radio-container">
+                            <input type="radio" id="am-1305" name="appointment-time" value="mattina 13/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="am-1305">Mattina 13/05</label>
                     </div>
                     <div class="appointment-option">
-                        <input type="radio" id="pm-1305" name="appointment-time" value="pomeriggio 13/05">
+                        <div class="radio-container">
+                            <input type="radio" id="pm-1305" name="appointment-time" value="pomeriggio 13/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="pm-1305">Pomeriggio 13/05</label>
                     </div>
                     <div class="appointment-option">
-                        <input type="radio" id="am-1405" name="appointment-time" value="mattina 14/05">
+                        <div class="radio-container">
+                            <input type="radio" id="am-1405" name="appointment-time" value="mattina 14/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="am-1405">Mattina 14/05</label>
                     </div>
                     <div class="appointment-option">
-                        <input type="radio" id="pm-1405" name="appointment-time" value="pomeriggio 14/05">
+                        <div class="radio-container">
+                            <input type="radio" id="pm-1405" name="appointment-time" value="pomeriggio 14/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="pm-1405">Pomeriggio 14/05</label>
                     </div>
                     <div class="appointment-option">
-                        <input type="radio" id="am-1505" name="appointment-time" value="mattina 15/05">
+                        <div class="radio-container">
+                            <input type="radio" id="am-1505" name="appointment-time" value="mattina 15/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="am-1505">Mattina 15/05</label>
                     </div>
                     <div class="appointment-option">
-                        <input type="radio" id="pm-1505" name="appointment-time" value="pomeriggio 15/05">
+                        <div class="radio-container">
+                            <input type="radio" id="pm-1505" name="appointment-time" value="pomeriggio 15/05">
+                            <span class="radio-custom"></span>
+                        </div>
                         <label for="pm-1505">Pomeriggio 15/05</label>
                     </div>
                 </div>
             </div>
-           <!-- Privacy Policy
+            <!-- Privacy Policy 
             <div class="form-option">
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required>
