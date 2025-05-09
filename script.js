@@ -94,20 +94,29 @@ function initCarousel() {
 
 // Function to handle form submission
 function initContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    const result = document.createElement('div');
-    result.id = 'result';
-    result.style.marginTop = '10px';
-    result.style.padding = '10px';
-    result.style.display = 'none';
+    // Supporta sia il nuovo approccio (con id="form") che quello vecchio (con class="contact-form")
+    const form = document.getElementById("form") || document.querySelector('.contact-form');
     
-    if (contactForm) {
-        // Aggiungi l'elemento result dopo il form
-        contactForm.after(result);
+    // Cerca un elemento #result esistente o creane uno nuovo
+    let result = document.getElementById("result");
+    if (!result) {
+        result = document.createElement('div');
+        result.id = 'result';
+        result.style.marginTop = '10px';
+        result.style.padding = '10px';
+        result.style.display = 'none';
         
-        contactForm.addEventListener('submit', function(e) {
+        // Aggiungi l'elemento result dopo il form
+        if (form) {
+            form.after(result);
+        }
+    }
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const formData = new FormData(contactForm);
+            
+            const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
             
@@ -116,12 +125,11 @@ function initContactForm() {
             result.innerHTML = isGerman ? "Bitte warten..." : "Attendere prego...";
             result.style.display = "block";
 
-            // Tentiamo di usare POST direttamente al form
-            fetch('http://api.web3forms.com/submit', {
-                method: 'POST',
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: json
             })
@@ -129,18 +137,23 @@ function initContactForm() {
                 let json = await response.json();
                 if (response.status == 200) {
                     result.innerHTML = json.message;
+                    result.style.color = "green"; // Aggiunge colore verde per successo
                 } else {
                     console.log(response);
                     result.innerHTML = json.message;
+                    result.style.color = "red"; // Aggiunge colore rosso per errore
                 }
             })
             .catch(error => {
                 console.log(error);
                 // Messaggio di errore localizzato
-                result.innerHTML = isGerman ? "Ein Fehler ist aufgetreten!" : "Si è verificato un errore!";
+                result.innerHTML = isGerman 
+                    ? "Ein Fehler ist aufgetreten! Bitte überprüfen Sie Ihre Internetverbindung." 
+                    : "Si è verificato un errore! Controlla la tua connessione internet.";
+                result.style.color = "red";
             })
             .then(function() {
-                contactForm.reset();
+                form.reset();
                 
                 // Reset appointment options
                 const parmaOptions = document.getElementById('parma-options');

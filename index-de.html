@@ -167,7 +167,7 @@
 
     <section id="contact" class="cta-section">
         <h2 class="section-title">Kontaktieren Sie uns</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <!-- chiave Alessandro Bubola -->
             <input type="hidden" name="access_key" value="ed0a385b-c174-4c4e-9213-e7aee30cfa88">
             <input type="hidden" name="subject" value="Anfrage für Serie X">
@@ -975,6 +975,7 @@
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button type="submit" class="cta-button">Senden</button>
         </form>
+        <div id="result" style="margin-top: 10px; padding: 10px; display: none;"></div>
     </section>
 
     <footer>
