@@ -24,6 +24,10 @@ body.loaded {
     opacity: 1;
 }
 
+.header-logo-de{
+    max-width: 300px;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -1020,6 +1024,10 @@ footer {
     
     .header-logo {
         max-width: 180px;
+    }
+
+    .header-logo-de {
+        max-width: 220px;
     }
     
     .certification-details {
