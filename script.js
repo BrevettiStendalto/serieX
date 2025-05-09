@@ -116,7 +116,8 @@ function initContactForm() {
             result.innerHTML = isGerman ? "Bitte warten..." : "Attendere prego...";
             result.style.display = "block";
 
-            fetch('https://api.web3forms.com/submit', {
+            // Tentiamo di usare POST direttamente al form
+            fetch('http://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
