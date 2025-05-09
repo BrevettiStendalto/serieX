@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize carousel
     initCarousel();
     
-    // Initialize form submission handler
-    initContactForm();
-    
     // Inizializza il selettore di prefisso telefonico
     initPhonePrefixSelector();
 });
@@ -71,65 +68,6 @@ function initCarousel() {
     setInterval(() => {
         goToSlide(currentSlide + 1);
     }, 5000);
-}
-
-// Function to handle form submission
-function initContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    const result = document.createElement('div');
-    result.id = 'result';
-    result.style.marginTop = '10px';
-    result.style.padding = '10px';
-    result.style.display = 'none';
-    
-    if (contactForm) {
-        // Aggiungi l'elemento result dopo il form
-        contactForm.after(result);
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-            result.innerHTML = "Attendere prego...";
-            result.style.display = "block";
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = json.message;
-                } else {
-                    console.log(response);
-                    result.innerHTML = json.message;
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                result.innerHTML = "Si è verificato un errore!";
-            })
-            .then(function() {
-                contactForm.reset();
-                
-                // Reset appointment options
-                const parmaOptions = document.getElementById('parma-options');
-                if (parmaOptions) {
-                    parmaOptions.style.display = 'none';
-                }
-                
-                setTimeout(() => {
-                    result.style.display = "none";
-                }, 5000);
-            });
-        });
-    }
 }
 
 // Smooth scroll for anchor links
