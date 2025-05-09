@@ -110,7 +110,10 @@ function initContactForm() {
             const formData = new FormData(contactForm);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
-            result.innerHTML = "Attendere prego...";
+            
+            // Controllo se la pagina è in tedesco
+            const isGerman = document.documentElement.lang === 'de';
+            result.innerHTML = isGerman ? "Bitte warten..." : "Attendere prego...";
             result.style.display = "block";
 
             fetch('https://api.web3forms.com/submit', {
@@ -132,7 +135,8 @@ function initContactForm() {
             })
             .catch(error => {
                 console.log(error);
-                result.innerHTML = "Si è verificato un errore!";
+                // Messaggio di errore localizzato
+                result.innerHTML = isGerman ? "Ein Fehler ist aufgetreten!" : "Si è verificato un errore!";
             })
             .then(function() {
                 contactForm.reset();

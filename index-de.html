@@ -170,7 +170,7 @@
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <!-- chiave Alessandro Bubola -->
             <input type="hidden" name="access_key" value="ed0a385b-c174-4c4e-9213-e7aee30cfa88">
-            <input type="hidden" name="subject" value="Richiesta informazioni serieX">
+            <input type="hidden" name="subject" value="Anfrage für Serie X">
             <input type="text" name="nome" placeholder="Vorname und Nachname" required>
             <input type="email" name="email" placeholder="e-Mail" required>
             <div class="phone-input-container">
@@ -962,6 +962,14 @@
                 <label for="privacy" class="small-text">Accetto la Privacy Policy</label>
             </div>
             -->
+            <div class="form-option">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <span class="checkbox-custom"></span>
+                </div>
+                <label for="privacy" class="small-text">Ich akzeptiere die Datenschutzrichtlinie</label>
+            </div>
+            
             <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             <input type="hidden" name="redirect" value="https://web3forms.com/success">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
